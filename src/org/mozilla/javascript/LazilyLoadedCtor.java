@@ -130,7 +130,7 @@ public final class LazilyLoadedCtor implements java.io.Serializable {
         }
     }
     
-    private Object buildValue0()
+    /*private*/ Object buildValue0()
     {
         Class<? extends Scriptable> cl = cast(Kit.classOrNull(className));
         if (cl != null) {

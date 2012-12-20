@@ -50,6 +50,10 @@ public abstract class VMBridge
 
     private static VMBridge makeInstance()
     {
+        /*
+         * Cequint: No reason to do any of this: We know the JDK version we are
+         * supporting. So for performance why do any of this sillyness.
+
         String[] classNames = {
             "org.mozilla.javascript.VMBridge_custom",
             "org.mozilla.javascript.jdk15.VMBridge_jdk15",
@@ -67,6 +71,10 @@ public abstract class VMBridge
             }
         }
         throw new IllegalStateException("Failed to create VMBridge instance");
+
+        */
+
+        return new org.mozilla.javascript.jdk13.VMBridge_jdk13();
     }
 
     /**

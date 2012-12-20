@@ -358,7 +358,7 @@ public class Node implements Iterable<Node>
         first = last = null;
     }
 
-    private static final Node NOT_SET = new Node(Token.ERROR);
+    /*private*/ static final Node NOT_SET = new Node(Token.ERROR);
 
     /**
      * Iterates over the children of this Node.  Supports child removal.  Not

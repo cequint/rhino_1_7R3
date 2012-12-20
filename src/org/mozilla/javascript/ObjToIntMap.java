@@ -463,7 +463,7 @@ public class ObjToIntMap implements Serializable
 // See Knuth etc.
     private static final int A = 0x9e3779b9;
 
-    private static final Object DELETED = new Object();
+    /*private*/ static final Object DELETED = new Object();
 
 // Structure of kyes and values arrays (N == 1 << power):
 // keys[0 <= i < N]: key value or null or DELETED mark

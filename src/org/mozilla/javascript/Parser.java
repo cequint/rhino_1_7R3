@@ -121,11 +121,11 @@ public class Parser
     ScriptNode currentScriptOrFn;
     Scope currentScope;
     int nestingOfWith;
-    private int endFlags;
-    private boolean inForInit;  // bound temporarily during forStatement()
-    private Map<String,LabeledStatement> labelSet;
-    private List<Loop> loopSet;
-    private List<Jump> loopAndSwitchSet;
+    /*private*/ int endFlags;
+    /*private*/ boolean inForInit;  // bound temporarily during forStatement()
+    /*private*/ Map<String,LabeledStatement> labelSet;
+    /*private*/ List<Loop> loopSet;
+    /*private*/ List<Jump> loopAndSwitchSet;
     // end of per function variables
 
     // Lacking 2-token lookahead, labels become a problem.

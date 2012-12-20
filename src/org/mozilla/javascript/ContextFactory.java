@@ -142,7 +142,7 @@ import java.security.PrivilegedAction;
 public class ContextFactory
 {
     private static volatile boolean hasCustomGlobal;
-    private static ContextFactory global = new ContextFactory();
+    /*private*/ static ContextFactory global = new ContextFactory();
 
     private volatile boolean sealed;
 

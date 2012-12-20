@@ -3420,7 +3420,7 @@ public class ScriptRuntime {
     private static boolean isVisible(Context cx, Object obj) {
         ClassShutter shutter = cx.getClassShutter();
         return shutter == null ||
-            shutter.visibleToScripts(obj.getClass().getName());
+            shutter.visibleToScripts(obj.getClass());
     }
 
     public static Scriptable enterWith(Object obj, Context cx,

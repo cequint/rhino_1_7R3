@@ -54,7 +54,7 @@ import java.util.WeakHashMap;
  */
 public abstract class SecureCaller
 {
-    private static final byte[] secureCallerImplBytecode = loadBytecode();
+    /*private*/ static final byte[] secureCallerImplBytecode = loadBytecode();
     
     // We're storing a CodeSource -> (ClassLoader -> SecureRenderer), since we
     // need to have one renderer per class loader. We're using weak hash maps
@@ -164,7 +164,7 @@ public abstract class SecureCaller
         });
     }
     
-    private static byte[] loadBytecodePrivileged()
+    /*private*/ static byte[] loadBytecodePrivileged()
     {
         URL url = SecureCaller.class.getResource("SecureCallerImpl.clazz");
         try

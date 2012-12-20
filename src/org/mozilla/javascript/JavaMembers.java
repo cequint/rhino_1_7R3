@@ -64,7 +64,7 @@ class JavaMembers
         try {
             Context cx = ContextFactory.getGlobal().enterContext();
             ClassShutter shutter = cx.getClassShutter();
-            if (shutter != null && !shutter.visibleToScripts(cl.getName())) {
+            if (shutter != null && !shutter.visibleToScripts(cl)) {
                 throw Context.reportRuntimeError1("msg.access.prohibited",
                                                   cl.getName());
             }
